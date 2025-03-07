@@ -19,5 +19,6 @@ def upload_file():
     filename = file.filename
     return render_template('result.html', filename=filename)
 
+# هذا السطر مطلوب لتشغيل Flask كـ Serverless Function
 def handler(request):
     return app(request)
