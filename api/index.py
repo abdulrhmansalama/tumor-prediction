@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for
 
+# إنشاء تطبيق Flask
 app = Flask(__name__, static_folder="../static", template_folder="../templates")
 
 @app.route('/')
