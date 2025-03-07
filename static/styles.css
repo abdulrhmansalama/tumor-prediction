@@ -1,0 +1,42 @@
+/* الألوان المخصصة */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+    --text-color: #343a40;
+    --highlight-color: #28a745;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Arial', sans-serif;
+}
+
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    border: none;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+.btn-primary:hover {
+    background-color: darken(var(--primary-color), 10%);
+}
+
+.result-box {
+    border: 1px solid var(--secondary-color);
+}

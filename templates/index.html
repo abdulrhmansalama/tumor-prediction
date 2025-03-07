@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical AI - Respiratory Tumor Detection</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="/">Medical AI</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- قسم الهيرو -->
+    <header class="bg-light py-5">
+        <div class="container text-center">
+            <h1 class="display-4">Respiratory Tumor Detection with AI</h1>
+            <p class="lead">Upload chest X-ray images to detect respiratory tumors using advanced AI models.</p>
+        </div>
+    </header>
+
+    <!-- قسم الخدمات -->
+    <section id="services" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 shadow">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Brain Tumor Detection</h5>
+                            <p class="card-text">Upload an MRI image to detect brain tumors.</p>
+                            <form action="/predict" method="post" enctype="multipart/form-data">
+                                <div class="mb-3">
+                                    <input type="file" class="form-control" name="file" accept="image/*" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Detect Tumor</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 shadow">
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Respiratory Tumor Detection</h5>
+                            <p class="card-text">Upload a chest X-ray image to detect respiratory tumors.</p>
+                            <form action="/predict_respiratory" method="post" enctype="multipart/form-data">
+                                <div class="mb-3">
+                                    <input type="file" class="form-control" name="file" accept="image/*" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Detect Tumor</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم عن الموقع -->
+    <section id="about" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">About Us</h2>
+            <p class="text-center">We provide advanced AI solutions for medical image analysis, helping doctors and patients with accurate tumor detection.</p>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2023 Medical AI. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
